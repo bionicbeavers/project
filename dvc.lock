@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  fetch_existing_data:
+    cmd: dvc pull -r storage
+  generate_and_append_data:
+    cmd: python data/random_data.py
+    deps:
+    - path: data/random_data.py
+      hash: md5
+      md5: 5a556575e0ad50a9222d8aa99e366c9a
+      size: 2443
+  push_updated_data:
+    cmd: dvc push -r storage
+    deps:
+    - path: data/dummy_sensor_data.csv
+      hash: md5
+      md5: 8920189cd3a5e8321dccf25b050681f3
+      size: 245097

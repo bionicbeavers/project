@@ -1,0 +1,17 @@
+stages:
+  fetch_existing_data:
+    cmd: dvc pull -r storage
+    deps: []
+    outs: []
+
+  generate_and_append_data:
+    cmd: python data/random_data.py 
+    deps:
+      - data/random_data.py
+    outs: []
+
+  push_updated_data:
+    cmd: dvc push -r storage
+    deps:
+      - data/dummy_sensor_data.csv
+    outs: []
