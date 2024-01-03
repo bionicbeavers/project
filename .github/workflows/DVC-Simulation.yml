@@ -28,7 +28,7 @@ jobs:
       env:
         GDRIVE_FOLDER_LINK: ${{ secrets.GDRIVE_FOLDER_LINK }}
       run: |
-        dvc remote add -d storage gdrive://$GDRIVE_FOLDER_LINK
+        dvc remote modify storage gdrive://$GDRIVE_FOLDER_LINK
 
     - name: Pull DVC files
       run: |
