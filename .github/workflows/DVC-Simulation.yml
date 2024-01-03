@@ -28,7 +28,7 @@ jobs:
       env:
         GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_FOLDER_LINK }}
       run: |
-        dvc init
+        dvc init -f
         dvc remote remove storage
         dvc remote add -d storage gdrive://${GDRIVE_CREDENTIALS_DATA}
         dvc repro --force
