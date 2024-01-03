@@ -30,13 +30,5 @@ jobs:
       run: |
         dvc remote remove storage
         dvc remote add -d storage gdrive://${GDRIVE_CREDENTIALS_DATA}
-        dvc pull
-
-    - name: Generate Random Data
-      run: python data/random_data.py 
-
-    - name: Add and Push Changes to DVC
-      run: |
-        dvc add data/dummy_sensor_data.csv
-        dvc push
+        dvc repro --force
 
