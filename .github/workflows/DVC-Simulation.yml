@@ -28,6 +28,9 @@ jobs:
       env:
         GDRIVE_FOLDER_LINK: ${{ secrets.GDRIVE_FOLDER_LINK }}
       run: |
-        dvc repro --force
+        dvc pull
+        python data/random_data.py 
+        dvc add data/dummy_sensor_data.csv
+        dvc push
         
 
