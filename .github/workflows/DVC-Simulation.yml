@@ -23,7 +23,12 @@ jobs:
     - name: Install dependencies and Upgrade pip
       run: |
         python -m pip install --upgrade pip && pip install -r requirements.txt
-
+        
+    - name: Set Git user authentication
+      run: |
+        git config --global user.email "actions@github.com"
+        git config --global user.name "GitHub Actions"
+        
     - name: Set up DVC remote
       env:
          GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_FOLDER_LINK }}
