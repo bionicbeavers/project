@@ -23,3 +23,17 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
+
+    - name: Initialize DVC
+      run: |
+        dvc init
+
+    - name: Set up DVC remote
+      env:
+        GDRIVE_FOLDER_LINK: ${{ secrets.GDRIVE_FOLDER_LINK }}
+      run: |
+        dvc remote add -d storage gdrive://$GDRIVE_FOLDER_LINK
+
+    - name: Pull DVC files
+      run: |
+        dvc pull
