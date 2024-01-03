@@ -36,4 +36,4 @@ jobs:
 
     - name: Pull DVC files
       run: |
-        dvc pull
+        dvc repro --force
