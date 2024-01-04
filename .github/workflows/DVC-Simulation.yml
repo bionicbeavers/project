@@ -28,4 +28,6 @@ jobs:
       env:
         GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_FOLDER_LINK }}
       run: |
-        dvc pull -r storage --force
+        dvc remote modify storage gdrive_acknowledge_abuse true
+        dvc pull 
+        
