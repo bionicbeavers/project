@@ -8,7 +8,7 @@ on:
     - cron: '0 * * * *' 
 
 jobs:
-  Initialize-DVC:
+  DVC-workflow:
     runs-on: ubuntu-latest
 
     steps:
@@ -32,11 +32,6 @@ jobs:
     - name: Pull data from DVC remote
       run: |
         dvc pull -r storage --force  
-        
-    - name: Git credentials
-      run: |
-        git config --global user.email "i190611@nu.edu.pk"
-        git config --global user.name "BionicBeavers"
      
     - name: Generate New Data and DVC Add
       run: |
@@ -46,6 +41,11 @@ jobs:
     - name: Push data to DVC remote
       run: |
         dvc push -r storage
+
+    - name: Git credentials
+      run: |
+        git config --global user.email "i200780@nu.edu.pk"
+        git config --global user.name "HissamSavul"
           
     - name: Commit changes to Git
       run: |
