@@ -24,10 +24,11 @@ jobs:
       run: |
         python -m pip install --upgrade pip && pip install -r requirements.txt
         
-    - name: Set up DVC remote
-      env:
-        GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_FOLDER_LINK }}
+    - name: Setup DVC
       run: |
-        dvc remote modify storage gdrive_acknowledge_abuse true
-        dvc pull 
-        
+        dvc remote modify storage gdrive_use_service_account true
+        dvc remote modify storage --local gdrive_service_account_json_file_path gdrive_credentials.json
+
+    - name: Pull data from DVC remote
+      run: |
+        dvc pull -r storage --force        
