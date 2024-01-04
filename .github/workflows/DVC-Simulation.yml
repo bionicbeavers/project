@@ -24,7 +24,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip && pip install -r requirements.txt
         
-    - name: Setup DVC
+    - name: Setup DVC for Service Account
       run: |
         dvc remote modify storage gdrive_use_service_account true
         dvc remote modify storage --local gdrive_service_account_json_file_path gdrive_credentials.json
