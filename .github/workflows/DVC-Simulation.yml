@@ -31,4 +31,20 @@ jobs:
 
     - name: Pull data from DVC remote
       run: |
-        dvc pull -r storage --force        
+        dvc pull -r storage --force  
+        
+    - name: Generate New Data and DVC Add
+      run: |
+        python data/random_data.py
+        dvc add data/dummy_sensor_data.csv
+
+    - name: Push data to DVC remote
+      run: |
+        dvc push -r storage
+          
+    - name: Commit changes to Git
+      run: |
+        git add .
+        git commit -m "Update DVC Files"
+        git push origin main
+        
