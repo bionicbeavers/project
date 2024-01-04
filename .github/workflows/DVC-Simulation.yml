@@ -33,6 +33,11 @@ jobs:
       run: |
         dvc pull -r storage --force  
         
+    - name: Git credentials
+      run: |
+        git config --global user.email "i190611@nu.edu.pk"
+        git config --global user.name "BionicBeavers"
+     
     - name: Generate New Data and DVC Add
       run: |
         python data/random_data.py
