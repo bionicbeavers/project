@@ -31,7 +31,7 @@ jobs:
 
     - name: Pull data from DVC remote
       run: |
-        dvc repro fetch_exisiting_data --force  
+        dvc repro fetch_existing_data --force  
      
     - name: Generate New Data and DVC Add
       run: |
