@@ -31,3 +31,34 @@ X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_st
 print(f"X_train shape: {X_train.shape}, y_train shape: {y_train.shape}")
 print(f"X_val shape: {X_val.shape}, y_val shape: {y_val.shape}")
 
+# Create RandomForestRegressor model
+model = RandomForestRegressor(random_state=42)
+
+# Define hyperparameters to tune
+param_grid = {
+    'n_estimators': [50, 100, 150],
+    'max_depth': [None, 5, 10, 15],
+    'min_samples_split': [2, 5, 10],
+    'min_samples_leaf': [1, 2, 4]
+}
+
+# Perform GridSearchCV for hyperparameter tuning
+grid_search = GridSearchCV(estimator=model, param_grid=param_grid, cv=3, scoring='neg_mean_squared_error', verbose=2)
+grid_search.fit(X_train, y_train)
+
+# Get the best model from the grid search
+best_model = grid_search.best_estimator_
+
+# Train the best model on the entire training set
+best_model.fit(X_train, y_train)
+
+# Predict on the validation set
+y_pred = best_model.predict(X_val)
+
+# Evaluate model performance on validation set
+mse = mean_squared_error(y_val, y_pred)
+print(f"Mean Squared Error on Validation Set: {mse}")
+
+# Get the best hyperparameters found by GridSearchCV
+best_params = grid_search.best_params_
+print("Best Hyperparameters:", best_params)
