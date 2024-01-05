@@ -31,16 +31,16 @@ jobs:
 
     - name: Pull data from DVC remote
       run: |
-        dvc repro -n fetch_exisiting_data --force  
+        dvc repro fetch_exisiting_data --force  
      
     - name: Generate New Data and DVC Add
       run: |
-        dvc repro -n generate_and_append_data --force  
+        dvc repro generate_and_append_data --force  
         dvc add data/dummy_sensor_data.csv
 
     - name: Push data to DVC remote
       run: |
-        dvc repro -n push_updated_data --force  
+        dvc repro push_updated_data --force  
 
     - name: Git credentials
       run: |
