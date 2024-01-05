@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/669952794174513685/8968671ce084480c9ed5a92a3359965c/artifacts
+end_time: 1704428632369
+entry_point_name: ''
+experiment_id: '669952794174513685'
+lifecycle_stage: active
+run_id: 8968671ce084480c9ed5a92a3359965c
+run_name: beautiful-bug-612
+run_uuid: 8968671ce084480c9ed5a92a3359965c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704428630468
+status: 3
+tags: []
+user_id: chughtai
