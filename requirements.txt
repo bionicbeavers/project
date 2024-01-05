@@ -2,3 +2,4 @@ dvc==3.30.1
 dvc-gdrive==2.20.0
 pandas==2.1.4
 numpy==1.26.2
+scikit-learn
