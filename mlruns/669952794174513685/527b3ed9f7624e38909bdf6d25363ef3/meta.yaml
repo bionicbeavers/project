@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/669952794174513685/527b3ed9f7624e38909bdf6d25363ef3/artifacts
+end_time: 1704439410011
+entry_point_name: ''
+experiment_id: '669952794174513685'
+lifecycle_stage: active
+run_id: 527b3ed9f7624e38909bdf6d25363ef3
+run_name: indecisive-vole-31
+run_uuid: 527b3ed9f7624e38909bdf6d25363ef3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704439408040
+status: 3
+tags: []
+user_id: chughtai

@@ -113,6 +113,7 @@ while retry_count < max_retries:
         # Attempt to load the model associated with the best run
         loaded_model = mlflow.sklearn.load_model("runs:/{}/machine_sensor_model".format(best_run_id))
         print("Model loaded successfully.")
+        print(loaded_model)
         break  # Break out of the loop if successful
     except Exception as e:
         print(f"Error loading the model (retry {retry_count + 1}): {e}")
@@ -123,7 +124,20 @@ while retry_count < max_retries:
 if loaded_model:
     with open('best_model.pkl', 'wb') as file:
         pickle.dump(loaded_model, file)
+   
+    registered_model_name = "my-best-model"  # Replace with your desired model name
+
+    model_version = mlflow.register_model(
+        model_uri= "runs:/{}/machine_sensor_model".format(best_run_id),
+        name=registered_model_name,
+        # description='Best model for production',
+    )
 
     print("Best model saved as 'best_model.pkl'")
 else:
     print("Failed to load the model after maximum retries.")
+
+
+bestMode = mlflow.sklearn.load_model("models:/my-best-model/latest")
+print(bestMode)
+    

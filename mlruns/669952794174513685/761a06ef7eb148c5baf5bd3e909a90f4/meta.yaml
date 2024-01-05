@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/669952794174513685/761a06ef7eb148c5baf5bd3e909a90f4/artifacts
+end_time: 1704432969138
+entry_point_name: ''
+experiment_id: '669952794174513685'
+lifecycle_stage: active
+run_id: 761a06ef7eb148c5baf5bd3e909a90f4
+run_name: mysterious-gnat-615
+run_uuid: 761a06ef7eb148c5baf5bd3e909a90f4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704432967319
+status: 3
+tags: []
+user_id: chughtai

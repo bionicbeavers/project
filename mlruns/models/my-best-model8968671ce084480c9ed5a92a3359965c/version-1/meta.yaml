@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1704438399090
+current_stage: None
+description: ''
+last_updated_timestamp: 1704438399090
+name: my-best-model8968671ce084480c9ed5a92a3359965c
+run_id: 8968671ce084480c9ed5a92a3359965c
+run_link: ''
+source: mlflow-artifacts:/669952794174513685/8968671ce084480c9ed5a92a3359965c/artifacts/machine_sensor_model
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/669952794174513685/8968671ce084480c9ed5a92a3359965c/artifacts/machine_sensor_model
+user_id: null
+version: 1

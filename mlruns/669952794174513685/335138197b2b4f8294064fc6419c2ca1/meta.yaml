@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/669952794174513685/335138197b2b4f8294064fc6419c2ca1/artifacts
+end_time: 1704438552885
+entry_point_name: ''
+experiment_id: '669952794174513685'
+lifecycle_stage: active
+run_id: 335138197b2b4f8294064fc6419c2ca1
+run_name: ambitious-dove-14
+run_uuid: 335138197b2b4f8294064fc6419c2ca1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704438551074
+status: 3
+tags: []
+user_id: chughtai

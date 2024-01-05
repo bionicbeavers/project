@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/669952794174513685/9eef6cf0da5b4065beb9471050fd165b/artifacts
+end_time: 1704438079294
+entry_point_name: ''
+experiment_id: '669952794174513685'
+lifecycle_stage: active
+run_id: 9eef6cf0da5b4065beb9471050fd165b
+run_name: languid-fox-281
+run_uuid: 9eef6cf0da5b4065beb9471050fd165b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704438077483
+status: 3
+tags: []
+user_id: chughtai
