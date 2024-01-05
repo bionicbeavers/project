@@ -10,6 +10,12 @@ stages:
       - data/random_data.py
     outs: []
 
+  training_model:
+    cmd: python train.py 
+    deps:
+      - tran.py 
+    outs: []
+
   push_updated_data:
     cmd: dvc push -r storage
     deps:
