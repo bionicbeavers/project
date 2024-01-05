@@ -25,4 +25,4 @@ jobs:
 
       - name: Push Docker image
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/mlops-project:latest
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/mlops-project:latest
