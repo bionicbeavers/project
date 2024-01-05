@@ -15,7 +15,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Set up Python and Upgrade pip
+    - name: Set up Python
       uses: actions/setup-python@v3
       with:
         python-version: 3.9 
@@ -37,6 +37,10 @@ jobs:
       run: |
         dvc repro generate_and_append_data --force  
         dvc add data/dummy_sensor_data.csv
+
+    - name: Training on new Data
+      run: |
+        dvc repro training_model --force  
 
     - name: Push data to DVC remote
       run: |
