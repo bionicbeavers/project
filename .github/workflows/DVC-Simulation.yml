@@ -1,5 +1,8 @@
-name: DVC Setup
-
+name: DVC and MlFlow
+env:
+  MLFLOW_TRACKING_USERNAME: bionicbeavers
+  MLFLOW_TRACKING_PASSWORD: 8df55faeede0adc9caa2ffcce5b289029492be70
+  
 on:
   push:
     branches:
