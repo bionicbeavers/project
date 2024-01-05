@@ -68,7 +68,7 @@ best_params = grid_search.best_params_
 print("Best Hyperparameters:", best_params)
 
 # Set our tracking server uri for logging
-mlflow.set_tracking_uri(uri="http://127.0.0.1:9090")
+# mlflow.set_tracking_uri(uri="http://127.0.0.1:9090")
 
 # Create a new MLflow Experiment
 mlflow.set_experiment("MLflow Machine Sensor")
