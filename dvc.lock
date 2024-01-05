@@ -7,12 +7,12 @@ stages:
     deps:
     - path: data/random_data.py
       hash: md5
-      md5: 5a556575e0ad50a9222d8aa99e366c9a
-      size: 2443
+      md5: 06736d417bf367339ab683905bfc1dd6
+      size: 2379
   push_updated_data:
     cmd: dvc push -r storage
     deps:
     - path: data/dummy_sensor_data.csv
       hash: md5
-      md5: 91fc45b00673c6b1ecc2e480c9de3eb6
-      size: 318609
+      md5: cc8661b6746ede3845af462e1b9fe253
+      size: 675668
