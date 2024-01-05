@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/669952794174513685/e1b928e86a5a498cb7ab3af8fd8f7195/artifacts
+end_time: 1704440313401
+entry_point_name: ''
+experiment_id: '669952794174513685'
+lifecycle_stage: active
+run_id: e1b928e86a5a498cb7ab3af8fd8f7195
+run_name: thundering-panda-856
+run_uuid: e1b928e86a5a498cb7ab3af8fd8f7195
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704440311397
+status: 3
+tags: []
+user_id: chughtai

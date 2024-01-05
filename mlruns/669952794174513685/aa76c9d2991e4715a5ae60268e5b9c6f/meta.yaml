@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/669952794174513685/aa76c9d2991e4715a5ae60268e5b9c6f/artifacts
+end_time: 1704440450225
+entry_point_name: ''
+experiment_id: '669952794174513685'
+lifecycle_stage: active
+run_id: aa76c9d2991e4715a5ae60268e5b9c6f
+run_name: orderly-shrimp-286
+run_uuid: aa76c9d2991e4715a5ae60268e5b9c6f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704440448339
+status: 3
+tags: []
+user_id: chughtai

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/669952794174513685/3b4b7293683c418995dbf12fa449d4dd/artifacts
+end_time: 1704440571938
+entry_point_name: ''
+experiment_id: '669952794174513685'
+lifecycle_stage: active
+run_id: 3b4b7293683c418995dbf12fa449d4dd
+run_name: bouncy-goose-610
+run_uuid: 3b4b7293683c418995dbf12fa449d4dd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704440570040
+status: 3
+tags: []
+user_id: chughtai
