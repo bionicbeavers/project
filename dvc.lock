@@ -14,5 +14,5 @@ stages:
     deps:
     - path: data/dummy_sensor_data.csv
       hash: md5
-      md5: 0700871e1254981914fa4a5cf81a631e
-      size: 772184
+      md5: e77205391bc19c09d0980fe3ef6b22b6
+      size: 796313
