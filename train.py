@@ -6,7 +6,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import mean_squared_error
 
 # Read the CSV file into a DataFrame
-file_path = 'dummy_sensor_data.csv'
+file_path = './data/dummy_sensor_data.csv'
 data = pd.read_csv(file_path)
 
 # Encode categorical columns (Machine_ID and Sensor_ID)
