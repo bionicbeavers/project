@@ -1,9 +1,17 @@
 Work done by each member
 
-i190611:
-
-
 i200447:
+Model processing
+Model Training
+docker pipiline
+Flask App
 
+i200780:
+dvc flow
+dvc yaml pipeline
+dvc pipiline
 
-i200780"
+i190611:
+dvc backend setup api service
+Ml Flow tracking, register best model
+mlflow pipiline

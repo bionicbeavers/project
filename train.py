@@ -67,11 +67,11 @@ print(f"Mean Squared Error on Validation Set: {mse}")
 best_params = grid_search.best_params_
 print("Best Hyperparameters:", best_params)
 
-# Set our tracking server uri for logging
 mlflow.set_tracking_uri(uri="https://dagshub.com/bionicbeavers/project.mlflow")
 
 mlflow.set_registry_uri(uri="https://dagshub.com/bionicbeavers/project.mlflow")
-# Create a new MLflow Experiment
+
+
 mlflow.set_experiment("MLflow Machine Sensor")
 
 # Start an MLflow run
