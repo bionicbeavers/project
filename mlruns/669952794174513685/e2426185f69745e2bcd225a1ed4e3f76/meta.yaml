@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/669952794174513685/e2426185f69745e2bcd225a1ed4e3f76/artifacts
+end_time: 1704430103524
+entry_point_name: ''
+experiment_id: '669952794174513685'
+lifecycle_stage: active
+run_id: e2426185f69745e2bcd225a1ed4e3f76
+run_name: ambitious-skunk-217
+run_uuid: e2426185f69745e2bcd225a1ed4e3f76
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704430101697
+status: 3
+tags: []
+user_id: chughtai

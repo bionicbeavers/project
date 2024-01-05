@@ -1,9 +1,13 @@
+import mlflow
+from mlflow.models import infer_signature
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import mean_squared_error
+import pickle
+import time
 
 # Read the CSV file into a DataFrame
 file_path = './data/dummy_sensor_data.csv'
@@ -62,3 +66,64 @@ print(f"Mean Squared Error on Validation Set: {mse}")
 # Get the best hyperparameters found by GridSearchCV
 best_params = grid_search.best_params_
 print("Best Hyperparameters:", best_params)
+
+# Set our tracking server uri for logging
+mlflow.set_tracking_uri(uri="http://127.0.0.1:9090")
+
+# Create a new MLflow Experiment
+mlflow.set_experiment("MLflow Machine Sensor")
+
+# Start an MLflow run
+with mlflow.start_run():
+    # Log the hyperparameters
+    mlflow.log_params(best_params)
+
+    # Log the loss metric
+    mlflow.log_metric("msevalue", mse)
+
+    # Set a tag that we can use to remind ourselves what this run was for
+    mlflow.set_tag("Training Info", "dummy_data")
+
+    # Infer the model signature
+    signature = infer_signature(X_train, best_model.predict(X_train))
+
+    # Log the model
+    model_info = mlflow.sklearn.log_model(
+        sk_model=best_model,
+        artifact_path="machine_sensor_model",
+        signature=signature,
+        input_example=X_train,
+        registered_model_name="tracking-machine-sensing",
+    )
+
+
+# Retrieve the run ID of the run with the lowest MSE value
+best_run = mlflow.search_runs(order_by=["metrics.msevalue ASC"]).iloc[0]
+best_run_id = best_run.run_id
+
+print("Best Run ID:", best_run_id)
+
+# Retry mechanism
+max_retries = 5
+retry_delay = 10  # seconds
+retry_count = 0
+
+while retry_count < max_retries:
+    try:
+        # Attempt to load the model associated with the best run
+        loaded_model = mlflow.sklearn.load_model("runs:/{}/machine_sensor_model".format(best_run_id))
+        print("Model loaded successfully.")
+        break  # Break out of the loop if successful
+    except Exception as e:
+        print(f"Error loading the model (retry {retry_count + 1}): {e}")
+        retry_count += 1
+        time.sleep(retry_delay)
+
+# Save the loaded model as a pickle file
+if loaded_model:
+    with open('best_model.pkl', 'wb') as file:
+        pickle.dump(loaded_model, file)
+
+    print("Best model saved as 'best_model.pkl'")
+else:
+    print("Failed to load the model after maximum retries.")
