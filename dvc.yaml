@@ -13,7 +13,7 @@ stages:
   training_model:
     cmd: python train.py 
     deps:
-      - tran.py 
+      - train.py 
     outs: []
 
   push_updated_data:
