@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1704440313389
+current_stage: None
+description: ''
+last_updated_timestamp: 1704440313389
+name: tracking-machine-sensing
+run_id: e1b928e86a5a498cb7ab3af8fd8f7195
+run_link: ''
+source: mlflow-artifacts:/669952794174513685/e1b928e86a5a498cb7ab3af8fd8f7195/artifacts/machine_sensor_model
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/669952794174513685/e1b928e86a5a498cb7ab3af8fd8f7195/artifacts/machine_sensor_model
+user_id: null
+version: 18

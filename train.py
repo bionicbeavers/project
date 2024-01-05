@@ -8,7 +8,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import mean_squared_error
 import pickle
 import time
-
+import os
 # Read the CSV file into a DataFrame
 file_path = './data/dummy_sensor_data.csv'
 data = pd.read_csv(file_path)
@@ -68,8 +68,9 @@ best_params = grid_search.best_params_
 print("Best Hyperparameters:", best_params)
 
 # Set our tracking server uri for logging
-mlflow.set_tracking_uri(uri="http://127.0.0.1:9090")
+mlflow.set_tracking_uri(uri="https://dagshub.com/bionicbeavers/project.mlflow")
 
+mlflow.set_registry_uri(uri="https://dagshub.com/bionicbeavers/project.mlflow")
 # Create a new MLflow Experiment
 mlflow.set_experiment("MLflow Machine Sensor")
 
@@ -122,6 +123,10 @@ while retry_count < max_retries:
 
 # Save the loaded model as a pickle file
 if loaded_model:
+    try:
+     os.remove("best_model.pkl")
+    except Exception as e:
+        print(e)
     with open('best_model.pkl', 'wb') as file:
         pickle.dump(loaded_model, file)
    
