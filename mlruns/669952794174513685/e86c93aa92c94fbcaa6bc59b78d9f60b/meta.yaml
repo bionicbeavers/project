@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/669952794174513685/e86c93aa92c94fbcaa6bc59b78d9f60b/artifacts
+end_time: 1704433227875
+entry_point_name: ''
+experiment_id: '669952794174513685'
+lifecycle_stage: active
+run_id: e86c93aa92c94fbcaa6bc59b78d9f60b
+run_name: dazzling-cow-856
+run_uuid: e86c93aa92c94fbcaa6bc59b78d9f60b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704433226032
+status: 3
+tags: []
+user_id: chughtai

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/669952794174513685/650e81e43fcd4d99ad9c5c3257fc9441/artifacts
+end_time: 1704438398983
+entry_point_name: ''
+experiment_id: '669952794174513685'
+lifecycle_stage: active
+run_id: 650e81e43fcd4d99ad9c5c3257fc9441
+run_name: gregarious-elk-827
+run_uuid: 650e81e43fcd4d99ad9c5c3257fc9441
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1704438397167
+status: 3
+tags: []
+user_id: chughtai
