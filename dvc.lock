@@ -14,8 +14,8 @@ stages:
     deps:
     - path: data/dummy_sensor_data.csv
       hash: md5
-      md5: 781166f88bf388e42733c001067fe346
-      size: 1857989
+      md5: 725d02566e0818677273e46593b21707
+      size: 1882118
   training_model:
     cmd: python train.py
     deps:
